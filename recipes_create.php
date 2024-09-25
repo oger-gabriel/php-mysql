@@ -1,5 +1,11 @@
 <?php
-session_start(); ?>
+session_start();
+if (!isset($_SESSION["LOGGED_USER"])) {
+    echo "Il faut être authentifié pour cette action.";
+    exit();
+}
+?>
+
 
 <!DOCTYPE html>
 <html>
